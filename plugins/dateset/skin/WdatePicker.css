@@ -1,0 +1,7 @@
+.Wdate{
+	background:#f8f8f8 url(calendar.png) right center no-repeat;
+}
+
+.WdateFmtErr{
+	color:red;
+}
