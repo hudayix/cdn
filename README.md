@@ -1,0 +1,2 @@
+# cdns
+mycms cdn files
