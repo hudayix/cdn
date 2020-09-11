@@ -229,8 +229,8 @@ h1{color:#9E9E9E;font-size:.35rem;line-height:1}
 .pinglun li .d1{display: flex; justify-content: space-between; align-items: stretch; flex-wrap: wrap;}
 .pinglun li .d2 img{width:.8rem;height:.8rem;border-radius:115px;}
 .pinglun li .d3{ flex: 1; display: flex; justify-content: center; align-items: stretch; flex-wrap: wrap; flex-direction: column; padding-left: .2rem}
-.pinglun li .d3 em{width:99px;display:block;line-height:1;color:#FAFAFA;font-size:.30rem;}
-.pinglun li .d3 span{width:99px;display:block;line-height:1;color:#999;font-size:.20rem; padding-top: .1rem}
+.pinglun li .d3 em{display:block;line-height:1;color:#FAFAFA;font-size:.30rem;}
+.pinglun li .d3 span{display:block;line-height:1;color:#999;font-size:.20rem; padding-top: .1rem}
 .pinglun li .d4{display: flex; justify-content: center; align-items: center; flex-wrap: wrap;}
 .pinglun li .d4 i{ font-size: .35rem; margin-left: .2rem; color: #888 }
 .pinglun li .d4 em{ font-size: .25rem; color: #888 }
