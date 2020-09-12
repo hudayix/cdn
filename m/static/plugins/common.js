@@ -1,30 +1,27 @@
-function sou()
-{
-    _k = $("#k").val();
-    if (_k !== "")
-    {
-        window.location.href='/search/' + _k
-    }   
-    else
-    {
+function sou() {
+	_k = $("#k").val();
+	if (_k !== "") {
+		window.location.href = '/search/' + _k
+	}
+	else {
 		layer.open({
 			content: '您还没有输入搜索关键词哦',
 			skin: 'msg',
 			time: 2,
-		});				
-    }
+		});
+	}
 }
-$(function() {
+$(function () {
 	//$("img.lazyload").lazyload();
-	$("img.lazyload").each(function(index, element) {
-        $(this).attr("src", $(this).attr("data-src"))
-    });
-	$('#k').bind('keyup', function(event) {
+	$("img.lazyload").each(function (index, element) {
+		$(this).attr("src", $(this).attr("data-src"))
+	});
+	$('#k').bind('keyup', function (event) {
 		if (event.keyCode == "13") {
 			sou();
 		}
 	});
-	$(document).on("click", ".submit", function() {
+	$(document).on("click", ".submit", function () {
 		_ishas = $(this).hasClass("disabled");
 		if (_ishas) {
 			return;
@@ -39,13 +36,13 @@ $(function() {
 			url: _action,
 			data: $('#' + _frmid).serialize(),
 			datatype: "html",
-			success: function(data) {
+			success: function (data) {
 				var models = eval("(" + data + ")");
 				layer.open({
 					content: models['msg'],
 					skin: 'msg',
 					time: 2,
-					end: function() {
+					end: function () {
 						if (models['status'] == "ok") {
 							if (models['callback'] !== "") {
 								eval(models['callback']);
@@ -68,30 +65,30 @@ $(function() {
 							}
 							_btn.removeAttr("disabled")
 							_btn.removeClass("disabled")
-						}	
+						}
 					}
-				});				
+				});
 			}
 		});
 		return false
 	})
-	$(document).on("click", ".get", function() {
+	$(document).on("click", ".get", function () {
 		_action = $(this).attr("action");
 		_return = $(this).attr("return");
 		layer.open({
 			content: '您确认要执行本次操作吗？',
 			btn: ['确定', '取消'],
-			yes: function(index) {
-				$.get(_action, function(data) {
+			yes: function (index) {
+				$.get(_action, function (data) {
 					var models = eval("(" + data + ")");
 					layer.open({
 						content: models['msg'],
 						skin: 'msg',
 						time: 2,
-						end: function() {
+						end: function () {
 							if (models['callback'] !== "") {
 								eval(models['callback']);
-							}						
+							}
 							if (_return !== "" && _return !== undefined) {
 								window.location.href = _return;
 							} else if (models['url'] !== "") {
@@ -109,15 +106,19 @@ function showdplist() {
 	$(".dplist").show();
 }
 
-function addfavorites(channel, id) {
-	$.get('/api.php?c=uc&a=addfavorites&channel=' + channel + "&id=" + id, function(data) {
+function addfavorites(channel, id, dom) {
+	$.get('/api.php?c=uc&a=addfavorites&channel=' + channel + "&id=" + id, function (data) {
 		var models = eval("(" + data + ")");
 		layer.open({
 			content: models['msg'],
 			skin: 'msg',
 			time: 2,
-			end: function() {
-				
+			end: function () {
+				if (models['msg'].indexOf('取消')>0) {
+					$(dom).html("收藏")
+				} else {
+					$(dom).html("取消收藏")
+				}
 			}
 		});
 	});
