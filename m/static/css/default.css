@@ -171,7 +171,6 @@ h1{color:#9E9E9E;font-size:.35rem;line-height:1}
 .bgf3{background:#f3f3f3 !important}
 .bgf{background:#fff}
 
-.taglist{}
 .taglist ul{display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap}
 .taglist ul li{padding:.1rem .05rem}
 .taglist ul li a{display:block;font-size:.25rem;color:#9E9E9E;border-radius:311px;text-align:center;background:#2f2f2f;padding:.1rem .25rem}
@@ -182,7 +181,6 @@ h1{color:#9E9E9E;font-size:.35rem;line-height:1}
 .lintab a{padding:.2rem .5rem .1rem .5rem;font-size:.25rem;color:#666;font-weight: bold}
 .lintab a.cur{background:url(../images/png/b10.png) center bottom no-repeat;background-size:25% 2px;font-size:.25rem;color:#ccc}
 
-.duanzi{}
 .duanzi li{padding:.2rem .05rem;display:block}
 .duanzi div.con{font-size:.35rem;padding:.4rem;line-height:1.5;background:#fff;border-radius:10px;box-shadow:rgba(0,0,0,0.2) 0 2px 6px 0}
 
