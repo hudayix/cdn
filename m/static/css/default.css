@@ -6,8 +6,6 @@
  * @support http://www.950085.com
  */
 
-
-
 .bdbg{background:url(../images/bg.jpg) center center no-repeat;background-size:cover;background-attachment:fixed}
 .adzone{display:flex;justify-content:center;align-items:center;padding:1.2rem 0;background:#efefef}
 .adzone em{font-size:.25rem}
